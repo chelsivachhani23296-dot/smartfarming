@@ -60,7 +60,7 @@ async function getWeatherForCity(city) {
   if (err) err.innerText = "";
   if (weatherCard) weatherCard.classList.add("hidden");
 
-  if (!OPENWEATHER_API_KEY || OPENWEATHER_API_KEY === "YOUR_API_KEY") {
+  if (!OPENWEATHER_API_KEY || OPENWEATHER_API_KEY === "edd4b686676e168e30fd66f5b1c77850") {
     if (err) err.innerText = "API key missing. Paste your OpenWeatherMap key in script.js";
     return;
   }
@@ -74,11 +74,11 @@ async function getWeatherForCity(city) {
     }
     const data = await res.json();
 
-    document.getElementById("cityName").innerText = ${data.name}, ${data.sys?.country || ""};
-    document.getElementById("weatherDesc").innerText = Condition: ${data.weather[0].description};
-    document.getElementById("temp").innerText = Temperature: ${data.main.temp} °C (feels like ${data.main.feels_like} °C);
-    document.getElementById("humidity").innerText = Humidity: ${data.main.humidity}%;
-    document.getElementById("wind").innerText = Wind: ${data.wind.speed} m/s;
+    document.getElementById("cityName").innerText = ${data.name}, {data.sys?.country || ""};
+    document.getElementById("weatherDesc").innerText = Condition: {data.weather[0].description};
+    document.getElementById("temp").innerText = Temperature: {data.main.temp} °C (feels like ${data.main.feels_like} °C);
+    document.getElementById("humidity").innerText = Humidity: {data.main.humidity}%;
+    document.getElementById("wind").innerText = Wind: {data.wind.speed} m/s;
 
     weatherCard.classList.remove("hidden");
   } catch (e) {
