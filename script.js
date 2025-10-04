@@ -5,7 +5,7 @@ document.querySelectorAll('section').forEach(sec => {
     });
 });
 // ---------- REPLACE THIS WITH YOUR OPENWEATHER API KEY ----------
-const OPENWEATHER_API_KEY = "5a29bb6b559ce41a068d7c327c061487"; // <<-- paste your key here
+const OPENWEATHER_API_KEY = "edd4b686676e168e30fd66f5b1c77850"; // <<-- paste your key here
 // -----------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
