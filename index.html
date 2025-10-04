@@ -14,36 +14,63 @@
 
     <section id="weather">
         <h2>Weather Forecast and Monitoring</h2>
+        <div class="weather-controls">
+    <input id="cityInput" type="text" placeholder="Enter city (e.g., Surat)">
+    <button id="getWeatherBtn">Get Weather</button>
+  </div>
+  <div id="weatherCard" class="hidden">
+    <h3 id="cityName"></h3>
+    <p id="weatherDesc"></p>
+    <p id="temp"></p>
+    <p id="humidity"></p>
+    <p id="wind"></p>
+  </div>
+  <p id="weatherError" class="error"></p>
         <p>Get latest weather updates for crops.</p>
     </section>
 
     <section id="cropAdvisor">
         <h2>Crop Advisor</h2>
+        <input type="text" id="cropInput" placeholder="Ask about crops (e.g., wheat)">
+  <button id="askAdvisorBtn">Ask</button>
+  <p id="cropAnswer"></p>
         <p>Get advice for better crop yield.</p>
     </section>
 
     <section id="cropGrowth">
         <h2>Crop Growth Monitoring</h2>
+        <canvas id="growthChart" width="400" height="200"></canvas>
         <p>Track growth stages of crops effectively.</p>
     </section>
 
     <section id="voiceAssistant">
         <h2>Multilingual Voice Assistance (FAQ)</h2>
+        <button id="voiceBtn"> Speak</button>
+  <p id="voiceText">Say something...</p>
         <p>Ask questions and get answers in multiple languages.</p>
     </section>
 
     <section id="marketPrice">
         <h2>Market Price Update</h2>
+        <button class="priceBtn" data-crop="wheat">Wheat</button>
+  <button class="priceBtn" data-crop="rice">Rice</button>
+  <button class="priceBtn" data-crop="cotton">Cotton</button>
+  <p id="priceOutput"></p>
         <p>Get latest market prices and buyer information.</p>
     </section>
 
     <section id="irrigation">
         <h2>Smart Irrigation Adviser</h2>
+        <label>Soil moisture (%): <input id="soilInput" type="number" value="25" min="0" max="100"></label>
+  <p id="irrigationResult"></p>
         <p>Optimize irrigation using smart tips.</p>
     </section>
 
     <section id="community">
         <h2>Community / Forum / Government Schemes</h2>
+        <textarea id="commentBox" placeholder="Write your comment..."></textarea>
+  <button id="postCommentBtn">Post</button>
+  <div id="comments"></div>
         <p>Join farming community and check govt. schemes.</p>
     </section>
 
